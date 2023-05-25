@@ -1,19 +1,15 @@
 function [Pi] = MonteCarlo_arr(n)
-  x = rand(1,n)
-  y = rand(1,n)
-  
-  r = arrayfun(@raio(x,y), x, y); 
-  
-  
+  x = rand(1,n);
+  y = rand(1,n);
+  funct = @(x,y)  (x.^2 + y.^2);
+  res = pararrayfun(nproc,funct, x,y);
+  r = sum(res <=1);
+  Pi = 4.0 * (r) / n
 end
 
 
 
-function R = raio(x,y)
-  
-  R = x.^2 + y.^2;
-  R = R<1;
-  
-  
+function R = sqrt_2d(x)
+  R = x(1,:).^2 + x(2,:).^2
  end
  

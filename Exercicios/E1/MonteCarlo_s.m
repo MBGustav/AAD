@@ -10,4 +10,6 @@ function Pi = MonteCarlo_s(n)
     
   end
   
-  Pi = 4.0 * total_acerto / n 
+  Pi = 4.0 * total_acerto / n ;
+  
+end

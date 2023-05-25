@@ -7,4 +7,6 @@ function Pi = MonteCarlo_p(n)
  r = x.^2 + y.^2;
  total_acerto = sum(r <= 1); 
   
-  Pi = 4.0 * total_acerto / n 
+  Pi = 4.0 * total_acerto / n ;
+  
+end
