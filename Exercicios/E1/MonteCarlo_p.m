@@ -1,4 +1,4 @@
-function Pi = MonteCarlo_p(n)
+function [x,y, Pi] = MonteCarlo_p(n)
   
   total_acerto = 0;
   x = rand(1, n);
@@ -8,5 +8,6 @@ function Pi = MonteCarlo_p(n)
  total_acerto = sum(r <= 1); 
   
   Pi = 4.0 * total_acerto / n ;
+
   
 end
